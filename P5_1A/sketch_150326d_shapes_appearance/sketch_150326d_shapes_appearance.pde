@@ -1,5 +1,5 @@
 // Fenstergroesse definierern
-size(800, 600);
+size(displayWidth/2, 600);
 
 // Fuellfarbe fuer Objekte definieren
 fill(255, 150, 0);
@@ -15,9 +15,10 @@ rectMode(CENTER);
 
 // Konturstaerke auf 3px festlegen
 strokeWeight(3);
+fill(255, 0, 0, 40);
 rect(400, 300, 100, 100);
 
-fill(255, 0, 0, 100);
+
 
 // Ellipsen von der linken oberen Ecke referenziert zeichnen
 ellipseMode(CORNER);
