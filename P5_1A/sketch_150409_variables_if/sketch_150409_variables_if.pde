@@ -24,6 +24,10 @@ String zB "Hello World", "Julia" ...
 float xPosition = 200;
 float yPosition = 10;
 
+int alter = 4;
+
+
+
 float xSpeed = 7;
 
 String name = "Anna";
@@ -32,20 +36,28 @@ String name = "Anna";
 void setup(){
   size(800, 600);
   
+  
   // nur innerhalb 
-  int test = 60;
+  int test = alter;
   frameRate(test);
+  
+  println(alter);
+  alter = alter + 1;
+  println(alter);
+  alter += 1; //  ist das gleiche wie:  alter = alter + 1;
+  println(alter);
   
   println("setup fertig");
   
   // begruessen:
   println("Hello " + name);
+  background(255);
 }
 
 // wird nach der setup immer wieder ausgefuehrt
 void draw(){
   // bei jedem neuen Frame ueberzeichnet der background alles vorher gezeichnete
-  background(255);
+  
   
   
   
@@ -53,7 +65,6 @@ void draw(){
   fill(0, 255, 0);
   ellipse(xPosition, yPosition, 40, 40);
   
-  // 
   xPosition = xPosition + xSpeed;
   yPosition = yPosition + 1.2;
   

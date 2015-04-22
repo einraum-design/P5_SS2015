@@ -24,7 +24,7 @@ String name = "Anna";
 int xPosition = 400;
 float yPosition = 10.0;
 
-int xSpeed = 1;
+int xSpeed = 7;
 
 
 // wird einmal zu Prgrammstart ausgefuehrt
@@ -80,20 +80,19 @@ void draw() {
   //yPosition = yPosition * 1.1;
   
   
-  // Vergleichsoperatoren == , >, <, !
+  // Vergleichsoperatoren == , >, <, !, >=, <=
+  // Logische Operatoren && (AND), || (OR)
   
-  if(xPosition > width){
+  if(xPosition >= width   ||   xPosition < 0){ 
     //xPosition = 0;
-    xSpeed = -1;//xSpeed * -1;
+    xSpeed = xSpeed * -1;
   }
   
+  /*
   if(xPosition < 0){
     //xPosition = 0;
-    xSpeed = 1;//xSpeed * -1;
+    xSpeed = xSpeed * -1;
   }
-  
-  
-  
-  
+  */
  
 }
