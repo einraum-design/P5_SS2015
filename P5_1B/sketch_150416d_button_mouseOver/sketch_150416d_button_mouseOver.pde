@@ -1,4 +1,4 @@
-color c = color(0, 255, 0);
+color cBackground = color(255);
 
 void setup(){
   size(800, 600);
@@ -6,7 +6,8 @@ void setup(){
 }
 
 void draw(){
-  background(c);
+  background(cBackground);
+  
   
   
   rectMode(CORNER);
@@ -15,9 +16,11 @@ void draw(){
   int w = 150;
   int h = 50;
   
+  cBackground = color(255);
+  
   if(mouseX > xPos && mouseX < xPos + w && mouseY > yPos && mouseY < yPos + h){
     fill(0, 0, 255);
-    c = color(0, 0, 255);
+    cBackground = color(0, 0, 255);
   } else{
     fill(0, 0, 150);
   }
@@ -37,8 +40,8 @@ void draw(){
   h = 50;
   
   if(mouseX > xPos - w/2 && mouseX < xPos + w/2 && mouseY > yPos -h/2 && mouseY < yPos + h/2){
-    fill(0, 255,0);
-    c = color(0, 255, 0);
+    fill(0, 150,0);
+    cBackground = color(0, 255, 0);
   } else{
     fill(0, 50, 0);
   }
