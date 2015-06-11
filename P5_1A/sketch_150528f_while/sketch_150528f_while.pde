@@ -26,3 +26,8 @@ while(counter < height){
   line(0, 0, width, counter);
   counter = counter + 10;
 }
+
+for(int counter = 0; counter < 100; counter = counter + 1){
+  float radius = random(50);
+  ellipse(random(width), random(height), radius, radius);
+}
